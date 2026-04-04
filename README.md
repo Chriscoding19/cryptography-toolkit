@@ -1,4 +1,4 @@
-# 🔐 Cryptography Toolkit
+# Cryptography Toolkit
 
 A comprehensive cryptography implementation covering classical, symmetric, asymmetric, and hashing — all in pure Python with zero external dependencies.
 
@@ -21,12 +21,12 @@ cryptography-toolkit/
 ├── reports/
 │   └── report_generator.py          ← HTML report
 └── tests/
-    └── test_cryptography.py         ← 67 unit tests ✅
+    └── test_cryptography.py         ← 67 unit tests
 ```
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # No dependencies — pure Python 3.8+
@@ -41,7 +41,7 @@ explorer.exe reports/crypto_report_*.html
 
 ---
 
-## 🔑 What's Implemented
+## What's Implemented
 
 ### Classical Ciphers (5)
 | Cipher | Type | Security |
@@ -76,6 +76,6 @@ explorer.exe reports/crypto_report_*.html
 
 ---
 
-## 🛠 Technologies
+## Technologies
 - **Language**: Python 3.8+ (zero external dependencies)
 - **Stdlib used**: `hashlib`, `hmac`, `secrets`, `struct`, `random`, `math`
