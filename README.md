@@ -4,7 +4,7 @@ A comprehensive cryptography implementation covering classical, symmetric, asymm
 
 ---
 
-## 📐 Architecture
+## Architecture
 
 ```
 cryptography-toolkit/
