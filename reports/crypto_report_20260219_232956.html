@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cryptography Toolkit Report</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+  h1 { color: #58a6ff; font-size: 2rem; margin-bottom: 0.3rem; }
+  h2 { color: #79c0ff; font-size: 1.2rem; margin: 2rem 0 1rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+  h3 { color: #d29922; font-size: 1rem; margin-bottom: 0.8rem; }
+  .meta { color: #8b949e; margin-bottom: 2rem; font-size: 0.9rem; }
+  .summary-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap: 1rem; margin-bottom: 2rem; }
+  .summary-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.2rem; text-align: center; }
+  .summary-card .number { font-size: 1.8rem; font-weight: bold; }
+  .summary-card .label  { font-size: 0.75rem; color: #8b949e; text-transform: uppercase; }
+  .cipher-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+  .cipher-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.2rem; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; border-radius: 8px; overflow: hidden; border: 1px solid #30363d; margin-bottom: 1rem; font-size: 0.85rem; }
+  th { background: #21262d; color: #8b949e; text-align: left; padding: 0.6rem 0.8rem; font-size: 0.75rem; text-transform: uppercase; }
+  td { padding: 0.6rem 0.8rem; border-top: 1px solid #21262d; }
+  td:first-child { color: #8b949e; font-size: 0.8rem; min-width: 180px; }
+  tr:hover td { background: #1c2128; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+  .badge-green { display:inline-block; padding:0.2rem 0.6rem; border-radius:4px; background:#0d2a14; color:#3fb950; font-size:0.8rem; font-weight:bold; }
+  .badge-red { display:inline-block; padding:0.2rem 0.6rem; border-radius:4px; background:#2a0d0d; color:#f85149; font-size:0.8rem; font-weight:bold; }
+  code { background:#21262d; padding:0.1rem 0.4rem; border-radius:3px; font-size:0.85rem; }
+  @media(max-width:768px){ .cipher-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🔐 Cryptography Toolkit</h1>
+  <div class="meta">Generated: 2026-02-19 23:29:56 &nbsp;|&nbsp;
+  Classical · Symmetric · Asymmetric · Hashing &nbsp;|&nbsp; Pure Python stdlib</div>
+
+  <div class="summary-grid">
+    <div class="summary-card"><div class="number" style="color:#58a6ff">5</div><div class="label">Classical Ciphers</div></div>
+    <div class="summary-card"><div class="number" style="color:#3fb950">3</div><div class="label">Symmetric Algos</div></div>
+    <div class="summary-card"><div class="number" style="color:#d29922">3</div><div class="label">Asymmetric Algos</div></div>
+    <div class="summary-card"><div class="number" style="color:#bc8cff">6</div><div class="label">Hash Functions</div></div>
+  </div>
+
+  <h2>Classical Ciphers</h2>
+  <div class="cipher-grid">
+        <div class="cipher-card">
+          <h3>Caesar ROT-13</h3>
+          <table><tbody><tr><td>Plaintext</td><td style='font-family:monospace;word-break:break-all'>CRYPTOGRAPHY IS THE ART OF SECRET WRITING</td></tr><tr><td>Ciphertext</td><td style='font-family:monospace;word-break:break-all'>PELCGBTENCUL VF GUR NEG BS FRPERG JEVGVAT</td></tr><tr><td>Key</td><td style='font-family:monospace;word-break:break-all'>shift=13</td></tr></tbody></table>
+        </div>
+        <div class="cipher-card">
+          <h3>Vigenère</h3>
+          <table><tbody><tr><td>Plaintext</td><td style='font-family:monospace;word-break:break-all'>CRYPTOGRAPHY IS THE ART OF SECRET WRITING</td></tr><tr><td>Ciphertext</td><td style='font-family:monospace;word-break:break-all'>UVAJKWZPSTJS ZA MFW ETN FN LCUVGN NZBRARI</td></tr><tr><td>Key</td><td style='font-family:monospace;word-break:break-all'>SECURITY</td></tr></tbody></table>
+        </div>
+        <div class="cipher-card">
+          <h3>Rail Fence</h3>
+          <table><tbody><tr><td>Plaintext</td><td style='font-family:monospace;word-break:break-all'>CRYPTOGRAPHY IS THE ART OF SECRET WRITING</td></tr><tr><td>Ciphertext</td><td style='font-family:monospace;word-break:break-all'>CTA TAOETIGRPORPYI H R FSCE RTNYGHSET RWI</td></tr><tr><td>Rails</td><td style='font-family:monospace;word-break:break-all'>3</td></tr></tbody></table>
+        </div>
+        <div class="cipher-card">
+          <h3>Playfair</h3>
+          <table><tbody><tr><td>Plaintext</td><td style='font-family:monospace;word-break:break-all'>HELLO WORLD</td></tr><tr><td>Ciphertext</td><td style='font-family:monospace;word-break:break-all'>FUOQMPXNSPHQ</td></tr><tr><td>Key</td><td style='font-family:monospace;word-break:break-all'>SECURITY</td></tr></tbody></table>
+        </div>
+        <div class="cipher-card">
+          <h3>One-Time Pad</h3>
+          <table><tbody><tr><td>Plaintext</td><td style='font-family:monospace;word-break:break-all'>TOP SECRET MESSAGE</td></tr><tr><td>Ciphertext</td><td style='font-family:monospace;word-break:break-all'>dc2787e541812b0e45245b6293e09216...</td></tr><tr><td>Key (hex)</td><td style='font-family:monospace;word-break:break-all'>8868d7c512c4685c00707b2fd6b3c157...</td></tr></tbody></table>
+        </div></div>
+
+  <h2>Frequency Analysis (Cryptanalysis)</h2>
+  <div class="card">
+        <p>Index of Coincidence: <strong>0.1339</strong>
+        → <strong>Monoalphabetic</strong></p>
+        <p>Top letters in ciphertext: <code>['E', 'R', 'G', 'K', 'H']</code></p>
+        <p>Expected English: <code>['E', 'T', 'A', 'O', 'I', 'N', 'S', 'H', 'R', 'D']</code></p></div>
+
+  <h2>Hash Functions</h2>
+  <p style="color:#8b949e;margin-bottom:1rem;font-size:0.85rem">Hashing "The quick brown fox jumps over the lazy dog"</p>
+  <table>
+    <thead><tr><th>Algorithm</th><th>Digest (Hex)</th></tr></thead>
+    <tbody><tr><td><strong>MD5</strong></td><td style='font-family:monospace;font-size:0.75rem;word-break:break-all'>9e107d9d372bb6826bd81d3542a419d6</td></tr><tr><td><strong>SHA1</strong></td><td style='font-family:monospace;font-size:0.75rem;word-break:break-all'>2fd4e1c67a2d28fced849ee1bb76e7391b93eb12</td></tr><tr><td><strong>SHA224</strong></td><td style='font-family:monospace;font-size:0.75rem;word-break:break-all'>730e109bd7a8a32b1cb9d9a09aa2325d2430587ddbc0c38bad911525</td></tr><tr><td><strong>SHA256</strong></td><td style='font-family:monospace;font-size:0.75rem;word-break:break-all'>d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592</td></tr><tr><td><strong>SHA384</strong></td><td style='font-family:monospace;font-size:0.75rem;word-break:break-all'>ca737f1014a48f4c0b6dd43cb177b0afd9e5169367544c494011e3317dbf9a509cb1e5dc1e85a941bbee3d7f2afbc9b1</td></tr><tr><td><strong>SHA512</strong></td><td style='font-family:monospace;font-size:0.75rem;word-break:break-all'>07e547d9586f6a73f73fbac0435ed76951218fb7d0c8d788a309d785436bbb642e93a252a954f23912547d1e8a3b5ed6e1bfd7097821233fa0538f3db854fee6</td></tr></tbody>
+  </table>
+
+  <h2>RSA Public-Key Cryptography</h2>
+  <div class="card">
+    <table><thead><tr><th>Property</th><th>Value</th></tr></thead><tbody><tr><td>Key size (bits)</td><td style='font-family:monospace;word-break:break-all'>511</td></tr><tr><td>Public exponent e</td><td style='font-family:monospace;word-break:break-all'>65537</td></tr><tr><td>Modulus n (hex, first 40)</td><td style='font-family:monospace;word-break:break-all'>0x5c72c6a564d6a96f34da42137e8db3326fad42...</td></tr><tr><td>Test message</td><td style='font-family:monospace;word-break:break-all'>12345</td></tr><tr><td>Encrypted</td><td style='font-family:monospace;word-break:break-all'>1928911253413179940446937075511315881496...</td></tr><tr><td>Decrypted</td><td style='font-family:monospace;word-break:break-all'>12345</td></tr><tr><td>Roundtrip OK</td><td style='font-family:monospace;word-break:break-all'>True</td></tr><tr><td>Signature valid</td><td style='font-family:monospace;word-break:break-all'>True</td></tr><tr><td>Tamper detected</td><td style='font-family:monospace;word-break:break-all'>True</td></tr></tbody></table>
+    <p style="margin-top:1rem">
+      Signature verification: <span class="badge-green">✓ VALID</span> &nbsp;
+      Tampered verification: <span class="badge-red">✗ INVALID</span>
+    </p>
+  </div>
+
+  <h2>Diffie-Hellman Key Exchange</h2>
+  <div class="card">
+    <p>Alice and Bob independently compute the same 256-bit shared secret over an insecure channel.</p>
+    <p style="margin-top:0.5rem">Shared secrets match: <span class="badge-green">✓ YES</span></p>
+    <p style="margin-top:0.5rem;color:#8b949e;font-size:0.85rem">Security: discrete logarithm problem (DLP)</p>
+  </div>
+
+  <h2>Password Hashing (PBKDF2-HMAC-SHA256)</h2>
+  <div class="card">
+    <table><thead><tr><th>Property</th><th>Value</th></tr></thead><tbody><tr><td>password</td><td style='font-family:monospace;word-break:break-all'>password123</td></tr><tr><td>unsalted_sha256</td><td style='font-family:monospace;word-break:break-all'>ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f</td></tr><tr><td>salted_hash_1</td><td style='font-family:monospace;word-break:break-all'>c588945b6d7ea5f3b2a8ef8af696e8a77e6489f2...</td></tr><tr><td>salted_hash_2</td><td style='font-family:monospace;word-break:break-all'>c67e4d8a0a7ac7c999c6a7b8a33f7d8a5121d29d...</td></tr><tr><td>hashes_differ</td><td style='font-family:monospace;word-break:break-all'>True</td></tr><tr><td>both_verify</td><td style='font-family:monospace;word-break:break-all'>True</td></tr></tbody></table>
+    <p style="margin-top:1rem;color:#8b949e;font-size:0.85rem">100,000 iterations · 32-byte salt · 32-byte key</p>
+  </div>
+
+  <h2>Merkle Tree (Blockchain Integrity)</h2>
+  <div class="card">
+    <p><strong>Root Hash:</strong> <code style="font-size:0.75rem">487b1578dde0adf40e28c8d9d2ab83ae4e73bdf6915de80c248c7449bb017f29</code></p>
+    <p style="margin-top:0.5rem"><strong>Proof verified:</strong> <span class="badge-green">✓ YES</span></p>
+    <p style="margin-top:0.5rem"><strong>Tampered leaf:</strong> <span class="badge-red">✗ DETECTED</span></p>
+    <p style="margin-top:0.8rem;color:#8b949e;font-size:0.85rem">O(log n) proof size — verifies any leaf without downloading the full tree.</p>
+  </div>
+
+  <h2>AES Cipher Mode Comparison</h2>
+  <table>
+    <thead><tr><th>Mode</th><th>Security</th><th>Pattern Leakage</th><th>IV Required</th></tr></thead>
+    <tbody>
+      <tr><td>ECB (Electronic Codebook)</td><td><span class="badge-red">INSECURE</span></td><td>Yes — identical blocks leak</td><td>No</td></tr>
+      <tr><td>CBC (Cipher Block Chaining)</td><td><span class="badge-green">SECURE</span></td><td>No</td><td>Yes (random)</td></tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
