@@ -1,6 +1,6 @@
 # Cryptography Toolkit
 
-A comprehensive cryptography implementation covering classical, symmetric, asymmetric, and hashing — all in pure Python with zero external dependencies.
+A comprehensive cryptography implementation covering classical, symmetric, asymmetric, and hashing - all in pure Python with zero external dependencies.
 
 ---
 
@@ -29,7 +29,7 @@ cryptography-toolkit/
 ## Quick Start
 
 ```bash
-# No dependencies — pure Python 3.8+
+# No dependencies - pure Python 3.8+
 python3 main.py
 
 # Run tests
@@ -46,18 +46,18 @@ explorer.exe reports/crypto_report_*.html
 ### Classical Ciphers (5)
 | Cipher | Type | Security |
 |---|---|---|
-| **Caesar** | Monoalphabetic substitution | Trivial — 26 possible keys |
-| **Vigenère** | Polyalphabetic substitution | Resisted 300 years — broken by Kasiski |
-| **Rail Fence** | Transposition | Weak — pattern visible |
+| **Caesar** | Monoalphabetic substitution | Trivial - 26 possible keys |
+| **Vigenère** | Polyalphabetic substitution | Resisted 300 years - broken by Kasiski |
+| **Rail Fence** | Transposition | Weak - pattern visible |
 | **Playfair** | Digraph substitution | Used in WWI by British forces |
 | **One-Time Pad** | XOR / Vernam | **Theoretically unbreakable** (Shannon 1949) |
 
 ### Symmetric Cryptography
-- **AES-128 / AES-256** — Pure Python implementation (FIPS 197 compliant)
-  - **ECB mode** — demonstrates pattern leakage weakness
-  - **CBC mode** — secure, industry-standard
-- **XOR Stream Cipher** — keystream via SHA-256 counter mode
-- **PBKDF2-HMAC-SHA256** — key derivation from passwords (100K iterations)
+- **AES-128 / AES-256** - Pure Python implementation (FIPS 197 compliant)
+  - **ECB mode** - demonstrates pattern leakage weakness
+  - **CBC mode** - secure, industry-standard
+- **XOR Stream Cipher** - keystream via SHA-256 counter mode
+- **PBKDF2-HMAC-SHA256** - key derivation from passwords (100K iterations)
 
 ### Asymmetric Cryptography (3)
 | Algorithm | Security Basis | Used For |
@@ -67,12 +67,12 @@ explorer.exe reports/crypto_report_*.html
 | **ElGamal** | Discrete logarithm | Public-key encryption |
 
 ### Hashing & Integrity
-- **SHA family** — MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512
-- **HMAC-SHA256** — authentication + integrity (requires secret key)
-- **Password Hashing** — PBKDF2 with salt (100K iterations, constant-time verify)
-- **Merkle Tree** — O(log n) integrity proofs (used in Bitcoin, Ethereum)
-- **Hash Chain** — S/KEY one-time passwords and blockchain linking
-- **Avalanche Effect** — demonstrated: 1-bit input change → ~50% hash change
+- **SHA family** - MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512
+- **HMAC-SHA256** - authentication + integrity (requires secret key)
+- **Password Hashing** - PBKDF2 with salt (100K iterations, constant-time verify)
+- **Merkle Tree** - O(log n) integrity proofs (used in Bitcoin, Ethereum)
+- **Hash Chain** - S/KEY one-time passwords and blockchain linking
+- **Avalanche Effect** - demonstrated: 1-bit input change → ~50% hash change
 
 ---
 
