@@ -88,7 +88,7 @@ def generate_html_report(results: dict, output_dir: str = "reports") -> str:
 </head>
 <body>
 <div class="container">
-  <h1>🔐 Cryptography Toolkit</h1>
+  <h1>Cryptography Toolkit</h1>
   <div class="meta">Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")} &nbsp;|&nbsp;
   Classical · Symmetric · Asymmetric · Hashing &nbsp;|&nbsp; Pure Python stdlib</div>
 
