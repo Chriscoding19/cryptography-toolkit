@@ -48,7 +48,7 @@ def section(title):
 
 def header():
     print("\n" + "═"*65)
-    print("   🔐  CRYPTOGRAPHY TOOLKIT")
+    print("   CRYPTOGRAPHY TOOLKIT")
     print("   Classical · Symmetric · Asymmetric · Hashing")
     print("═"*65)
 
@@ -286,12 +286,12 @@ def main():
     os.makedirs("reports", exist_ok=True)
     if not args.no_report:
         html = generate_html_report(report_data)
-        print(f"\n  📊 Report: {html}")
+        print(f"\n  Report: {html}")
         print(f"     explorer.exe {html}")
 
     elapsed = time.time() - start
     print(f"\n{'═'*65}")
-    print(f"  ✅  Complete! Total time: {elapsed:.1f}s")
+    print(f"  Complete! Total time: {elapsed:.1f}s")
     print(f"{'═'*65}\n")
 
 
